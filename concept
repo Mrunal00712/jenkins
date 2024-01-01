@@ -1,4 +1,4 @@
-CI/CD tool --> Jenkins
+CI/CD tool --> Jenkins, CircleCI, Bamboo etc.. ==> automation tools
 with the help of jenkin tool you can integrate with AWS cloud, alibaba cloud, Google cloud, Docker, podman, kubernetes openshift, terraform,
   ansible, puppet windows system, linux sysytem any testing tool like  selinium, build tool maven and any kind of SCM tool bigbucket, github, 
   any kind of automation............
@@ -7,8 +7,33 @@ Instllation of Jenkins ==> https://pkg.jenkins.io/redhat-stable/
   -1 jenkins is build on java first have to install java
 ************************************************************************************************************************************
 Maven build tool 
-Suppose you Idea is to create a webApp, you will be having the multiples files (java code file) all the fike come together and make  package (package is also known as software)
-  you have to first complile all this file, there is very famous Build tool available in market called MAVEN 
+  - Suppose you Idea is to create a webApp, you will be having the multiples files (java code file) all the fike come together and make  package (package is also known as software)
+    you have to first complile all this file, there is very famous Build tool available in market called MAVEN 
+  - Depends on language to language there are different build tool for java most famous is maven 
+
+Testing tool
+  -After the build we will required to check the funcationality of software is working fine or not so we can use some test cases
+   with the help of test cases we can check the funcationality (look and field) , (if any button is working fine or not) etc..
+   this tye of cases mostly known as unit test , it will be written by testing/dev eam by writhing code 
+   this test cases will run by Testing tools Maven, selennium  or anything else
+
+** Build and test tools requirect each time new set to not conflict with previous one for building and testing it will required new set up every time
+***************************************************************************************************************************
+Continous Integration
+
+  - Devloper Develop the code and pushes itnto SCM (gitHub)
+          Dev(JAVA) -----PUSH-------> SCM-GitHub
+    then the,
+      Build Tool(Maven) will pull the code and Build or compile the code 
+          SCM-----------PULL----------Build Tools(Maven)
+    then ,
+      it will forward to Testing tools
+        - It will run the no. of test cases
+        - If test cases Pass then it will move towards deployment process
+        - If test cases fail it will report back to the Devloper to fix the code 
+
+This process will go on continous upto deploymet , if it is manual required lot of time 
+    if it automate it has various benefits such as Time to Market, Agile, Fast etc..
 
 
 
@@ -16,4 +41,5 @@ Suppose you Idea is to create a webApp, you will be having the multiples files (
 
 
 
+Jenkins to connect with GitHub, Maven we have to install plugins
 
