@@ -39,3 +39,14 @@ This process will go on continous upto deploymet , if it is manual required lot 
 Jenkins to connect with GitHub, Maven we have to install plugins
 *******************************************************************************************************
 Inetgating Jenkins with GitHub 
+
+  In base linux system where the jenkins is install it create the user and given the power
+    # id jenkins // bydefault jenkins has no power is given 
+
+    - giving power to the jenkins
+      # vi /etc/sudoers  //write below command in editor 
+      " jenkins ALL=(ALL)     NOPASSWD: ALL "
+      and save the file forcefully :wq!
+
+
+
