@@ -1,0 +1,13 @@
+CI/CD tool --> Jenkins
+with the help of jenkin tool you can integrate with AWS cloud, alibaba cloud, Google cloud, Docker, podman, kubernetes openshift, terraform,
+  ansible, puppet windows system, linux sysytem any testing tool like  selinium, build tool maven and any kind of SCM tool bigbucket, github, 
+  any kind of automation............
+
+Instllation of Jenkins ==> https://pkg.jenkins.io/redhat-stable/
+  -1 jenkins is build on java first have to install java
+      # 
+
+
+
+
+
