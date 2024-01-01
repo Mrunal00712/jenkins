@@ -5,7 +5,13 @@ with the help of jenkin tool you can integrate with AWS cloud, alibaba cloud, Go
 
 Instllation of Jenkins ==> https://pkg.jenkins.io/redhat-stable/
   -1 jenkins is build on java first have to install java
-      # 
+************************************************************************************************************************************
+Maven build tool 
+Suppose you Idea is to create a webApp, you will be having the multiples files (java code file) all the fike come together and make  package (package is also known as software)
+  you have to first complile all this file, there is very famous Build tool available in market called MAVEN 
+
+
+
 
 
 
