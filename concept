@@ -35,11 +35,7 @@ Continous Integration
 This process will go on continous upto deploymet , if it is manual required lot of time 
     if it automate it has various benefits such as Time to Market, Agile, Fast etc..
 
-
-
-
-
-
-
+**************************************************************************************************************
 Jenkins to connect with GitHub, Maven we have to install plugins
-
+*******************************************************************************************************
+Inetgating Jenkins with GitHub 
