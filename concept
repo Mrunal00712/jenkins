@@ -47,6 +47,18 @@ Inetgating Jenkins with GitHub
       # vi /etc/sudoers  //write below command in editor 
       " jenkins ALL=(ALL)     NOPASSWD: ALL "
       and save the file forcefully :wq!
+*********************************************************************************************************************
+Cron Job
+
+This is the concept of scheduling the Job or to trigger the SCM ,]
+it comes with format    min  hour  date  month  day  , if there is requirement to run the job every 1 minute then 
+                         *    *      *     *     *       // job will build every minute 
+                        21    19     2     1     *          // today's date 2/1,24 and time 19:21
+*****************************************************************************************************************
+Triggers
+
+Build Triger  = will build job as time seted in cron job
+Poll SCM = will build job at seted time && if any changes happens in github file
 
 
 
