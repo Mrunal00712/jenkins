@@ -17,3 +17,5 @@ Agent Pogram
       Agent program 1 thing = connect with master
                     2 thing = follow the master instruction 
 
+Jenkins Master --> Dashboard --> Nodes --> Built in Node (the jenkins controller's built-in node)
+--> new node --> to add
