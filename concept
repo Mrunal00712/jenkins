@@ -62,6 +62,7 @@ Poll SCM = will build job at seted time && if any changes happens in github file
 
 ********************************************************************************************************************************
 jenkins store its file in wrkspace chech the console output for loacation ( /var/lib/jenkins/ )
-
+**  note that every time you start the instance the public ip get's changed , when you start the jenkins with new previous ip we hve to change it manully to not conflict 
+    Dashboard -> configuration --> jenkins location ---> Jenkins URL ----> http://(IP):8080/
 
 
