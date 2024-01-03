@@ -1,1 +1,19 @@
+Master-slave Architecture
+
+Build tool for Java = Ant, Gradle, Maven-- for different language has different
+Build means comple and test and build package
+
+** Distrubuted Scheduling 
+    Master node is distrubuting the job to different- differnt slaves this concept is known as Distributed scheduling
+    in Kubernetes same kind of architecture we known as distrubuted container , in hadoop distrubuted storage 
+
+On Demand
+  means code come from GitHub, Jenkins will set the environment, jenkin will perform the task in environment and Jenkin will delete the environment 
+
+Agent Pogram
+    From one computer to other computer you are sending the information/instruction you need some program runing there that 
+    program has should have capability to take the instruction from master accordingly they perform, that program typically known as agent program
+    we have to install Aent program on both the slave node 
+      Agent program 1 thing = connect with master
+                    2 thing = follow the master instruction 
 
