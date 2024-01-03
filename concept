@@ -60,5 +60,8 @@ Triggers
 Build Triger  = will build job as time seted in cron job
 Poll SCM = will build job at seted time && if any changes happens in github file
 
+********************************************************************************************************************************
+
+
 
 
