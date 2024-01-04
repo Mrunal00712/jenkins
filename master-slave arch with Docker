@@ -32,17 +32,22 @@ Slave-Agent:
                                                  Name : docker_image_maven
                                                  Docker Image: vimal13/jenkins-slave-maven
                                                  Container Setting:
+                                                     Remote File System Root: /home/jenkins
                                                      Connect method:connect with ssh
                                                                SSH Key : Use Configured SSH credentials
                                                                         ADD:-> User name : jenkins
                                                                                pass wd : jenkins
+                                                                        Select=> jenkins/*********
+                                                                Host Key Vefification Strategy : Non Verifying Srategy
+                                                 Pull Strategy : pull all images every time
+                                                 Save
 
-
-
-
-
-
-
+ Dashboard-> new job-> djob1-> freestyle -> 
+   General => Restrict where this project can be run : label= docker_build_maven
+   git => https://github.com/vimallinuxworld13/simple-java-maven-app.git
+   Build => Goals: clean package
+   Add build shell => Command : java -jar target/*.jar
+        Save
 
 
 
