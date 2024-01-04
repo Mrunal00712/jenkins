@@ -10,7 +10,7 @@ Slave-Agent:
  - Image == vimal13/jenkins-slave-maven
  - Docker is container is isolated they are connecting throw host only to coonect with jenkins master we have change some setting
    # systemctl status docker
-   # vim /usr/lib/system/docker.service
+   # /usr/lib/systemd/system/docker.service
    we have allow the connection
        ExecStart=/usr/bin/dockerd   -H tcp://0.0.0.0:4243  -H fd://...
    # systemctl daemon-reload
