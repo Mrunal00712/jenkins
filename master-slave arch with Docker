@@ -4,6 +4,53 @@ Slave-Agent:
   - we will equire the docker setup on the slave environment
   - we have to build the os using such docker image which contains, 1. Git Install
                                                                     2. Maven Install
-                                                                    3. SSH enabled
-                                                                    4. User name
-                                                                    5. Password
+                                                                    3. SSH enabled ==  //ssh running continously
+                                                                    4. User name == jenkins // to loinn as #ssh -l jenkins IP
+                                                                    5. Password == jenkins
+ - Image == vimal13/jenkins-slave-maven
+ - Docker is container is isolated they are connecting throw host only to coonect with jenkins master we have change some setting
+   # systemctl status docker
+   # vim /usr/lib/system/docker.service
+   we have allow the connection
+       ExecStart=/usr/bin/dockerd   -H tcp://0.0.0.0:4243  -H fd://...
+   # systemctl daemon-reload
+   # systemctl restart docker
+
+ - before doing anything first we will check the connectivity with docker system
+   Go to jenkins master base system # curl  (slaveIP):4243  //aws firwalld inbound rule (TCP) &&&& port no: 4243     
+                                    # curl slaveIP:4243/version   //if the page is displayed then it is having the connecivity
+
+ - now we have to configure the Jenkin master where is the my Docker platform (Integerating Jenkins with docker)
+     Here jenkins is integrating wih docker we have to install some plugins related to docker 
+     plugin-->available-->Docker=install
+  Manage Jenkins --> System Configuration --> Cloud -->Configure Clouds--Add a new Cloud --> Docker -->
+              --> name : docker 
+                  Docker cloud Details : Docker Host URL : tcp://(slaveIP):4243 ==> Test connection--> Tick =Enabled, Expose Docker_HOST  //I have told jenkins where my system is 
+                  Docker Agents templates -> Add Docker Template
+                                                 Labels: docker_build_maven
+                                                 Tick Enabled
+                                                 Name : docker_image_maven
+                                                 Docker Image: vimal13/jenkins-slave-maven
+                                                 Container Setting:
+                                                     Connect method:connect with ssh
+                                                               SSH Key : Use Configured SSH credentials
+                                                                        ADD:-> User name : jenkins
+                                                                               pass wd : jenkins
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
