@@ -16,7 +16,7 @@ Agent Pogram
     we have to install Aent program on both the slave node 
       Agent program 1 thing = connect with master
                     2 thing = follow the master instruction 
-
+***************************Adding linux slave to the Master Jenkins*******************************************************
 Jenkins Master --> Dashboard --> Nodes --> Built in Node (the jenkins controller's built-in node)
 --> new node --> to add
 Create new note == Linux slave -> permanent
@@ -35,3 +35,5 @@ Create new note == Linux slave -> permanent
             - Save 
     Launch Agent
 To run the job in slave , New Item -> create job -> General -> Restrict where this project-can be run -> Label expression = add label 
+**********************************************************************************************************************************
+Maven 
