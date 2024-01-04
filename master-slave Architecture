@@ -19,3 +19,19 @@ Agent Pogram
 
 Jenkins Master --> Dashboard --> Nodes --> Built in Node (the jenkins controller's built-in node)
 --> new node --> to add
+Create new note == Linux slave -> permanent
+             - Launch method = Launch agents via SSH 
+                - HOST = give the slave public IP 
+                - Credential = Jenkins(internal provided to you )
+                        Kind = SSH Username with private key 
+                            Username = ec2-user
+                            private key = enter directly ->  add --> copy private key and add
+            - Remote root directory = create a folde in diectory (name= jenkinsws) go to that folder and find path -- pwd ==/home/ec2-user/jenkinsws
+            - Labels = every node you have to give unique name , ex., linuxbuildnode
+            - Availability : Keep this agent online as much as possible 
+            - Host Key Verification Strategy = Non verifying Verification Strategy
+    Jenkins is sending agent to the slave system but this agent is written in the program java, we need java in slave system , min req JDK 11
+       same version as mastr you have to install java     
+            - Save 
+    Launch Agent
+To run the job in slave , New Item -> create job -> General -> Restrict where this project-can be run -> Label expression = add label 
