@@ -37,3 +37,46 @@ Create new note == Linux slave -> permanent
 To run the job in slave , New Item -> create job -> General -> Restrict where this project-can be run -> Label expression = add label 
 **********************************************************************************************************************************
 Maven 
+Maven is a build tool, test tool and id equried make a package for you 
+    java software/package normally have the extension as .jar/war 
+It has its own central library Maven Central
+Condition: 
+    suppose your java code has many libraries, when you your codes to build to maven you only give the library 
+    maven downlaod the library from the maven cntral and how they will know which file is to be downloade they will se the pom.xml file
+
+One of the Maven Capability: Just like using yum coomand when you download some package, yum automatically identify he dependencies and
+    download for you, just like this maven identify the oftware will download all its dependencies libraries or anythings required with
+    respect to there right version.
+
+Maven pratical: manual
+    Download this foled in linux(slave) , it cantains the javacode file , test file with librarues
+        - https://github.com/vimallinuxworld13/simple-java-maven-app.git
+    having pom.xml file is compulsary
+    for compile, build, test, packaging maven always read this file pom.xml
+    [root@ip-172-31-37-44 simple-java-maven-app]# yum install maven //first you have to install java min req
+    [root@ip-172-31-37-44 simple-java-maven-app]# mvn -version
+    [root@ip-172-31-37-44 simple-java-maven-app]# mvn compile
+                                                # mvn test
+                                                # mvn package
+                                                # cd target/
+                                                #ls
+                                                # java -jar my-app1.0-SNAPSHOT.jar // your code will run 
+mvn makes the things simpler , target/ file contains all the outputs 
+                                                # mvn clean clean package
+
+Maven Pratical : Jenkins
+    Requirements : the build tool in maven should install in slave and also git 
+    TO CONNECT WITh maven and git we requied plugins ,
+    your integratioon with maven , you have to installl maven plugin, with github want to install github plugin, with docker you have to install docker plugin
+    Manage Jenkins -> Manage plugins --> Availble plugins--> search -- Maven-- download-- Maven Integration
+    New Item -> javamavenjob1 - > Feestyle project 
+        General = Restrict where 
+                    Label Expression = linuxbuildnode
+        SCM -> Repo https://github.com/vimallinuxworld13/simple-java-maven-app.git
+        Build : Invoke top level Maven targets
+            Goal = clean package        //mens delete older package and crete new one , you can also build, test 
+        Post-build = Archive the artifacts --> Fils to archive --> target/*.jar
+
+    
+
+
