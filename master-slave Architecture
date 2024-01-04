@@ -77,6 +77,19 @@ Maven Pratical : Jenkins
             Goal = clean package        //mens delete older package and crete new one , you can also build, test 
         Post-build = Archive the artifacts --> Fils to archive --> target/*.jar
 
-    
+************************Adding Windows slave to the Master Jenkins****************************************
+launching windows system in aws 
+    in the window we will instal the our agent program & our agent program will go to genkin and connect this is known as JNLP protocol
+for connect : windows come with RDP protocl go to win-> search-- emote Dextop connection
+    dashboard--> new node -> name -> windows-slave-1
+                            Remote root directory = C:\jenkinsws // create a this name folder in RDP windows
+                            Labels : windows
+                            Launch method : Launch agent by connecting it to the controller
+                            Use WebSocke : enable 
+        save 
+in thisthe slave windows have to come and connect to the master 
+    How slave windos  will come @1 Install JDK
+                                @2 download agent
+                                @3 Agent ----> master
 
 
