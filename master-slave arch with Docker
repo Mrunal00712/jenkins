@@ -33,6 +33,7 @@ Slave-Agent:
                                                  Docker Image: vimal13/jenkins-slave-maven
                                                  Container Setting:
                                                      Remote File System Root: /home/jenkins
+                                                     Usage: Only build jobs wit label expression matching this node 
                                                      Connect method:connect with ssh
                                                                SSH Key : Use Configured SSH credentials
                                                                         ADD:-> User name : jenkins
@@ -47,6 +48,7 @@ Slave-Agent:
    git => https://github.com/vimallinuxworld13/simple-java-maven-app.git
    Build => Goals: clean package
    Add build shell => Command : java -jar target/*.jar
+  post build Actions: Archiv the artifacts -> Files to archive : target/*.jar
         Save
 
 
