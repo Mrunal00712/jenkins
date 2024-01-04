@@ -1,1 +1,9 @@
+ Master-slave architecture with Docker
 
+Slave-Agent:
+  - we will equire the docker setup on the slave environment
+  - we have to build the os using such docker image which contains, 1. Git Install
+                                                                    2. Maven Install
+                                                                    3. SSH enabled
+                                                                    4. User name
+                                                                    5. Password
