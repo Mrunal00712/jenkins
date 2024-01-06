@@ -6,5 +6,11 @@ pipeline {
       echo "git pull my code "
     }
   }
+  stage('Deploy'){
+    steps{
+      echo "Jenkins deploy my code"
+      
+    }
+  }
   }
 }
