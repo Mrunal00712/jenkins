@@ -1,1 +1,18 @@
+plugin: Build Pipeline , to give look look & field
 
+If we want to automate thisngs fully the it is not possible bya any automation tools, itis coming from culture "Silos"
+
+to automate the things we have to write the code - here we have to write in a Groovy language
+
+Groovy Language -> 1. Scripted
+                   2. Declearative (here we are useing this)
+                      - in declearative you just need to decleare you don't need to know internal commandes.
+                      - ex., you need to install some software then we use "yum install software name)
+                              in this you just have to decleare "# i want to install pacakage : dialog ", no need to know the yum internal command
+
+plan :-> Job1     -> Job2     ->  Job3 
+        Stage1      stage2       stage3
+         SCM        Deploy        Test
+         pull
+
+Code: 
