@@ -12,5 +12,9 @@ pipeline {
       
     }
   }
+  stage('test'){
+    steps{
+      echo "jenkins test my code"
+    }
   }
 }
